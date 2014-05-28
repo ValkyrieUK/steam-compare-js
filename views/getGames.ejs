@@ -1,7 +1,15 @@
 <h1> this is the get games page </h1>
 <p>You have <%= game_count %> games</p>
 
+<div style="background-color:orange;">
+<img src="<%= profile.avatarfull %>" />
+<p><%= profile.realname %></p>
+<h3><a href="<%= profile.profileurl %>"><%= profile.personaname %></a></h3>
+</div>
+
 <% for (var i = 0; i < games.length; i++) { %>
+<div style="background-color: lime;">
   <p><%= games[i].name %></p>
   <img src="http://media.steampowered.com/steamcommunity/public/images/apps/<%= games[i].appid %>/<%= games[i].img_logo_url %>.jpg" />
+  </div>
   <% } %>
